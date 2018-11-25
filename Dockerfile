@@ -1,4 +1,4 @@
-FROM kong
+FROM kong:0.14
 
 ENV KONG_CUSTOM_PLUGINS kong-http-to-https-redirect,kong-response-string-replace,kong-referer-restriction
 
