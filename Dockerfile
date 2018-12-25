@@ -1,6 +1,6 @@
 FROM kong
 
-ENV KONG_CUSTOM_PLUGINS kong-http-to-https-redirect,kong-response-string-replace,kong-referer-restriction
+ENV KONG_PLUGINS bundled,kong-http-to-https-redirect,kong-response-string-replace,kong-referer-restriction
 
 RUN apk update && apk add git
 RUN git clone --branch repo-dsteinkopf https://github.com/dsteinkopf/kong-http-to-https-redirect \
