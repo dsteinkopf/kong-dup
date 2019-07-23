@@ -13,8 +13,8 @@ RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/ap
     apk update && \
     apk add brotli-dev@testing
 RUN git clone https://github.com/sjnam/lua-resty-brotli && \
-    cd lua-resty-brotli/lib && \
-    cp --parents resty/brotli/* /usr/local/openresty/site/lualib
+    cd lua-resty-brotli && \
+    cp --parents brotli/* /usr/local/openresty/site/lualib
 
 # add kong plugins:
 RUN git clone --branch repo-dsteinkopf https://github.com/dsteinkopf/kong-http-to-https-redirect \
