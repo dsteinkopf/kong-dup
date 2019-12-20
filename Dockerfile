@@ -1,4 +1,4 @@
-FROM kong:1.3
+FROM kong:1.4
 
 ENV KONG_PLUGINS bundled,kong-http-to-https-redirect,kong-response-string-replace,kong-referer-restriction
 
